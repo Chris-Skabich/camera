@@ -1,8 +1,16 @@
+# ______________________________________________
+# Imports for the camera specifications list   |
+# ____________________________________________|
 import requests
 from requests.auth import HTTPDigestAuth
 import os
 from dotenv import load_dotenv
+# ________________________________________________
+# Outputs camera specifications list in terminal |
+# instead of needing Wisenet web interface      |
+# _____________________________________________|
 
+# Load enviornment variables from .env file
 load_dotenv()
 sunapi_url=os.getenv("SUNAPI_URL")
 if not sunapi_url:
