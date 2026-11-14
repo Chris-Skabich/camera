@@ -16,9 +16,8 @@ Hanwha's Q-Series cameras do not support onboard Open Platform applications (`.c
 This repository will house multiple standalone programs, each focusing on a different computer vision concept:
 
 * **[01] Stream Basics:** Connecting to the RTSP feed, handling credentials securely, and digitally zooming/resizing frames. *(Completed)*
-* **[02] Object Detection:** Integrating YOLOv8 to identify and crop nocturnal wildlife using the camera's active IR illumination. *(Planned)*
-* **[03] ALPR (Automated License Plate Recognition):** Utilizing optical character recognition to log vehicles entering the frame. *(Planned)*
-* **[04] Posture Monitor:** Real-time skeletal tracking using MediaPipe to calculate and correct desk posture. *(Planned)*
+* **[02] Sign Language Trainer:** Tracking hand landmarks using MediaPipe to recognize and train the American Sign Language (ASL) alphabet. *(Planned)*
+* **[03] Guitar Chord Recognizer:** Detecting finger placement on a guitar fretboard to identify standard tuning chords in real-time. *(Planned)*
 
 ## Getting Started
 
