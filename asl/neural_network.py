@@ -36,6 +36,15 @@ class ASLNeuralNetwork:
             writer = csv.writer(f)
             writer.writerow([label] + features.tolist())
 
+    def reset_dataset(self):
+        """Deletes the CSV dataset and trained model so you can retrain from scratch."""
+        if self.dataset_path.exists():
+            self.dataset_path.unlink()
+        if self.model_path.exists():
+            self.model_path.unlink()
+        self.model = None
+        self.status_message = "CSV cleared! Hold a sign & press A-Z to record."
+
     def train(self):
         """Trains a 2-hidden-layer MLPClassifier on all recorded 79-feature samples."""
         if not self.dataset_path.exists():
@@ -58,7 +67,7 @@ class ASLNeuralNetwork:
 
         if legacy_rows > 0 and not X:
             self.model = None
-            self.status_message = "Old 42-feat CSV found. Delete asl_dataset.csv & re-record."
+            self.status_message = "Old 42-feat CSV found. Click CLEAR CSV to reset."
             return False
 
         unique_labels = sorted(set(y))
